@@ -17,7 +17,7 @@
 # Configuration Directory #
 # ======================= #
 
-export ZSHCONFIG="${HOME}/.config/zsh"
+export ZSHCONFIG="${XDG_CONFIG_HOME}/zsh"
 
 # ========================= #
 # Pre-Command Configuration #

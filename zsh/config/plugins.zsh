@@ -13,6 +13,12 @@
 # limitations under the License.                                            #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
+# ============================== #
+# Set the installation directory #
+# ============================== #
+
+export ADOTDIR="${XDG_CACHE_HOME}/antigen"
+
 # ================================ #
 # Load the antigen package manager #
 # ================================ #

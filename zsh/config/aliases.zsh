@@ -41,5 +41,9 @@ alias quit=" exit"
 # Git Aliases #
 # =========== #
 
-alias gs="git status"
+alias gs=" git status"
+alias gd=" git diff"
+alias gc=" git commit"
+alias gp=" git push"
+alias ga=" git add"
 

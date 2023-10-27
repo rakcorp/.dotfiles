@@ -54,7 +54,10 @@ hot_reload() {
 
 precmd() {
   # Use a separate history file for each directory.
-  export HISTFILE="${PWD}/.zsh_history"
+  HISTDIR="${XDG_STATE_HOME}/zsh${PWD}"
+  mkdir -p -- "$HISTDIR" # Create the directory if it doesn't exist.
+  export HISTFILE="${HISTDIR}/history"
+
 
   # Hot-reload any updated config files.
   for file in ${ZSHCONFIG}/config/*.zsh; do

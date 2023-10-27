@@ -66,5 +66,6 @@ precmd() {
 # Startup Commands #
 # ================ #
 
+eval $(thefuck --alias) # fuck --yeah
 neofetch # :)
 

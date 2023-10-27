@@ -2,8 +2,8 @@
 # Compiler Specifications #
 # ======================= #
 
-export CC="clang-16"
-export CXX="clang++-16"
+export CC="clang"
+export CXX="clang++"
 
 # =========================== #
 # XDG Directory Specification #

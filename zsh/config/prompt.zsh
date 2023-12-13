@@ -18,10 +18,16 @@
 # =================== #
 
 # Shell Right Prompt:
-RPROMPT="" # ( ~vcs~ >>> branch~ )
-RPROMPT+="%F{39}%f%K{39}%F{233}%s%f%k"                            # ( ~vcs~
-RPROMPT+="%K{245}%F{39}%f%%F{245}%K{240}%k%f%F{240}%K{236}%k%f" # >>> # separator
-RPROMPT+="%K{236} %F{39}%b%a%f%k%F{236}%f"                        # branch~ )
+VCS_NORMAL="" # ( ~vcs~ >>> branch~ )
+VCS_NORMAL+="%F{39}%f%K{39}%F{233}%s%f%k"                            # ( ~vcs~
+VCS_NORMAL+="%K{245}%F{39}%f%%F{245}%K{240}%k%f%F{240}%K{236}%k%f" # >>> # separator
+VCS_NORMAL+="%K{236} %F{39}%b%u%c%f%k%F{236}%f"                        # branch~ )
+
+# Shell Right Prompt:
+VCS_ACTION="" # ( ~vcs~ >>> branch~ )
+VCS_ACTION+="%F{39}%f%K{39}%F{233}%s %a%f%k"                            # ( ~vcs~
+VCS_ACTION+="%K{245}%F{39}%f%%F{245}%K{240}%k%f%F{240}%K{236}%k%f" # >>> # separator
+VCS_ACTION+="%K{236} %F{39}%b%u%c%f%k%F{236}%f"                        # branch~ )
 
 # Exit Code: green if success, red if failure.
 EXIT_CODE="%(?.%F{green}.%F{red})exit %?%f"
@@ -39,7 +45,11 @@ PROMPT+="%K{236} ${EXIT_CODE} %k%F{236} %k"               # exit code > |
 
 setopt PROMPT_SUBST
 autoload -Uz vcs_info
-zstyle ':vcs_info:*' formats $RPROMPT
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr '%F{yellow}*%f'
+zstyle ':vcs_info:*' stagedstr '%F{green}+%f'
+zstyle ':vcs_info:*' formats $VCS_NORMAL
+zstyle ':vcs_info:*' actionformats $VCS_ACTION
 zstyle ':vcs_info:*' enable git cvs svn
 
 # vcs_info_wrapper to allow prompt expansion.

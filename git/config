@@ -28,3 +28,6 @@
 [core]
 	# Set the global gitignore file.
 	excludesfile = ~/.config/git/ignore
+	editor = nvim
+[gpg]
+	program = /opt/homebrew/bin/gpg

@@ -37,7 +37,7 @@ declare -A LAST_RELOAD
 hot_reload() {
 
   # Do nothing if there is no $1.
-  [[ -e $1 ]] || return 0
+  [[ -e $1 ]] || return 1
   
   # Check if $1 has been modified since last reload.
   # The modifier `(:A)` resolves any symbolic links.
@@ -49,19 +49,22 @@ hot_reload() {
 
     # File reloaded, so update last reload time.
     LAST_RELOAD[$1]=$(date +%s)
+
+    # File was reloaded.
+    return 0
   fi
+
+  # File wasn't reloaded.
+  return 1
 }
 
 precmd() {
-  # Use a separate history file for each directory.
-  HISTDIR="${XDG_STATE_HOME}/zsh${PWD}"
-  mkdir -p -- "$HISTDIR" # Create the directory if it doesn't exist.
-  export HISTFILE="${HISTDIR}/history"
-
-
   # Hot-reload any updated config files.
   for file in ${ZSHCONFIG}/config/*.zsh; do
-    hot_reload "$file"
+    if hot_reload "$file"; then
+      # If the file was reloaded, echo that info to the terminal.
+      echo "\x1b[92m[INFO]\x1b[0m reloaded config file \x1b[93mzsh/config/$file:t\x1b[0m"
+    fi
   done
 }
 

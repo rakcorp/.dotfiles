@@ -1,3 +1,4 @@
+
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Copyright © 2023 Rak Laptudirm <rak@laptudirm.com>                        #
 #                                                                           #
@@ -13,11 +14,12 @@
 # limitations under the License.                                            #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-# ========================= #
-# Set Important ZSH Options #
-# ========================= #
+# Use a separate history file for each directory.
+HISTDIR="${XDG_STATE_HOME}/zsh${PWD}"
+mkdir -p -- "$HISTDIR" # Create the directory if it doesn't exist.
+export HISTFILE="${HISTDIR}/history"
 
-# Append commands to history after they have been run instead
-# of adding all the commands together during shell exit.
-setopt INC_APPEND_HISTORY
-
+# Various ZSH History options.
+export HISTSIZE=10000 # Cap history at 10,000 entries.
+export SAVEHIST=10000 # Save the last 10,000 commands.
+setopt SHARE_HISTORY  # Sync history between zsh and its history file.

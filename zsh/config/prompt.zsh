@@ -21,13 +21,13 @@
 VCS_NORMAL="" # ( ~vcs~ >>> branch~ )
 VCS_NORMAL+="%F{39}%f%K{39}%F{233}%s%f%k"                            # ( ~vcs~
 VCS_NORMAL+="%K{245}%F{39}%f%%F{245}%K{240}%k%f%F{240}%K{236}%k%f" # >>> # separator
-VCS_NORMAL+="%K{236} %F{39}%b%u%c%f%k%F{236}%f"                        # branch~ )
+VCS_NORMAL+="%K{236} %F{39}%b%u%c%f%k%F{236}%f"                      # branch~ )
 
 # Shell Right Prompt:
 VCS_ACTION="" # ( ~vcs~ >>> branch~ )
-VCS_ACTION+="%F{39}%f%K{39}%F{233}%s %a%f%k"                            # ( ~vcs~
+VCS_ACTION+="%F{39}%f%K{39}%F{233}%s %a%f%k"                         # ( ~vcs~
 VCS_ACTION+="%K{245}%F{39}%f%%F{245}%K{240}%k%f%F{240}%K{236}%k%f" # >>> # separator
-VCS_ACTION+="%K{236} %F{39}%b%u%c%f%k%F{236}%f"                        # branch~ )
+VCS_ACTION+="%K{236} %F{39}%b%u%c%f%k%F{236}%f"                      # branch~ )
 
 # Exit Code: green if success, red if failure.
 EXIT_CODE="%(?.%F{green}.%F{red})exit %?%f"

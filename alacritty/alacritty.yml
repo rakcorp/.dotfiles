@@ -22,17 +22,17 @@ font:
 
 # Alacritty Terminal Window Options
 window:
-  padding: { x: 5, y: 0}  # Left and Right Padding
-  decorations: Buttonless # Clean Buttonless Look (Mac)
-  opacity: 0.8            # Sexy translucent backgroundd
+  decorations: Transparent       # Clean Buttonless Look (Mac)
+  opacity: 0.5            # Sexy translucent backgroundd
   option_as_alt: OnlyLeft # Allow left Option as Alt(M)
+  startup_mode: FullScreen
 
 # Github Themed Alacritty Colors
 colors:
   # Default colors
   primary:
-    background: '0x0d1117'
-    foreground: '0xb3b1ad'
+    background: '0x010409'
+    foreground: '0xb1bac4'
 
   # Normal colors
   normal:

@@ -20,7 +20,7 @@ alias sudo="sudo "
 # Modern Coreutils #
 # ================ #
 
-alias ls="exa --grid --icons -xa --group-directories-first"
+alias ls="eza --grid --icons -xa --group-directories-first"
 alias rip="rip --graveyard ~/.local/share/Trash"
 
 # ============== #
@@ -36,6 +36,9 @@ alias vi="nvim"
 
 alias exit=" exit"
 alias quit=" exit"
+
+alias python="python3"
+alias pinentry=" pinentry-mac"
 
 # =========== #
 # Git Aliases #

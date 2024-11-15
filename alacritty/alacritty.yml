@@ -22,10 +22,18 @@ font:
 
 # Alacritty Terminal Window Options
 window:
-  decorations: Transparent       # Clean Buttonless Look (Mac)
-  opacity: 0.5            # Sexy translucent backgroundd
+  # Window Styling Configuration
+  decorations: Transparent # Clean No-borders Look (Mac)
+
+  # Other Window Options
   option_as_alt: OnlyLeft # Allow left Option as Alt(M)
-  startup_mode: FullScreen
+
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
 
 # Github Themed Alacritty Colors
 colors:

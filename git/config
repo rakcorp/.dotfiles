@@ -28,10 +28,13 @@
 [core]
 	# Set the global gitignore file.
 	excludesfile = ~/.config/git/ignore
-	editor = nvim
+
 [gpg]
+	# Use the GPG installed by Homebrew.
 	program = /opt/homebrew/bin/gpg
+
 [filter "lfs"]
+	# Aliases for git-lfs commands.
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

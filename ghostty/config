@@ -1,0 +1,23 @@
+# Main Terminal behaviour
+window-save-state = always
+macos-option-as-alt = left
+focus-follows-mouse = true
+cursor-click-to-move = true
+mouse-hide-while-typing = true
+shell-integration-features = sudo
+
+# Quick Terminal behaviour
+quick-terminal-position = center
+keybind = global:ctrl+grave_accent=toggle_quick_terminal
+
+# Ghostty Appearance
+font-family = SF Mono
+macos-titlebar-style = tabs
+theme = dark:catppuccin-mocha, light:catppuccin-latte
+
+# Ghostty Icon configuration
+macos-icon = custom-style
+macos-icon-frame = aluminum
+macos-icon-ghost-color = cyan
+macos-icon-screen-color = cyan
+

@@ -15,9 +15,9 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 # Use a separate history file for each directory.
-HISTDIR="${XDG_STATE_HOME}/zsh${PWD}"
-mkdir -p -- "$HISTDIR" # Create the directory if it doesn't exist.
-export HISTFILE="${HISTDIR}/history"
+# HISTDIR="${XDG_STATE_HOME}/zsh${PWD}"
+# mkdir -p -- "$HISTDIR" # Create the directory if it doesn't exist.
+export HISTFILE="${XDG_STATE_HOME}/zsh/history"
 
 # Various ZSH History options.
 export HISTSIZE=10000 # Cap history at 10,000 entries.

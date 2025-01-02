@@ -1,3 +1,9 @@
+# ============================ #
+# Common Environment Variables #
+# ============================ #
+
+export EDITOR="nvim"
+
 # ======================= #
 # Compiler Specifications #
 # ======================= #

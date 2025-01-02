@@ -66,6 +66,10 @@ precmd() {
       echo "\x1b[92m[INFO]\x1b[0m reloaded config file \x1b[93mzsh/config/$file:t\x1b[0m"
     fi
   done
+
+  for file in ${ZSHCONFIG}/precmd/*.zsh; do
+    builtin source $file
+  done
 }
 
 # ================ #

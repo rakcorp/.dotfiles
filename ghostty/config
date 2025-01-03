@@ -13,6 +13,7 @@ keybind = global:ctrl+grave_accent=toggle_quick_terminal
 # Ghostty Appearance
 font-family = SF Mono
 macos-titlebar-style = tabs
+unfocused-split-opacity = 1
 window-padding-color = extend
 window-padding-balance = true
 theme = dark:catppuccin-mocha, light:catppuccin-latte
